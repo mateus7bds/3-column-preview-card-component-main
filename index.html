@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+	<title>Frontend Mentor | 3-column preview card component</title>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+		:root {
+			--bright-orange: hsl(31, 77%, 52%);
+			--dark-cyan: hsl(184, 100%, 22%);
+			--very-dark-cyan: hsl(179, 100%, 13%);
+			--transparent-white: hsla(0, 0%, 100%, 0.75);
+			--very-light-gray: hsl(0, 0%, 95%);
+		}	
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: 'Lexend Deca', sans-serif;
+			border: none;
+			outline: none;
+		}
+		body {
+			background-color: var(--very-light-gray);
+			font-size: 15px;
+		}
+		main#tudo {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+		}
+		h1 {
+			text-transform: uppercase;
+		}
+		div#cards {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: center;
+			align-items: center;
+			width: 990px;
+		}
+		div#sedans, div#suvs, div#luxury {
+			width: 330px;
+			height: 500px;
+			padding: 3.8rem;
+		}
+		div#sedans {
+			background-color: var(--bright-orange);
+			border-radius: 10px 0 0 10px;
+		}
+		div#suvs {
+			background-color: var(--dark-cyan);
+		}
+		div#luxury {
+			background-color: var(--very-dark-cyan);
+			border-radius: 0 10px 10px 0;
+		}
+		div.alinhar-conteudo {
+			height: 280px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+		}
+		img#icon-suvs, img#icon-sedans, img#icon-luxury {
+			width: 4rem;
+		}
+		h1 {
+			font-family: 'Big Shoulders Display', cursive;
+			font-size: 2.7em;
+		}
+		p, h1 {
+			color: var(--transparent-white);
+		}
+		p {
+			line-height: 180%;
+		}
+		div.learn-more {
+			display: inline-block;
+			width: 130px;
+			background-color: var(--very-light-gray);
+			text-align: center;
+			padding: 0.6rem;
+			border-radius: 1.5rem;
+			margin-top: 5rem;
+		}
+		div#botao-sedans {
+			color:var(--bright-orange);
+			border: thin solid var(--very-light-gray);
+		}
+		div#botao-suvs {
+			color:var(--dark-cyan);
+			border: thin solid var(--very-light-gray);
+		}
+		div#botao-luxury {
+			color:var(--very-dark-cyan);
+			border: thin solid var(--very-light-gray);
+		}
+		div#botao-sedans:hover, div#botao-luxury:hover, div#botao-suvs:hover {
+			color: var(--very-light-gray);
+			cursor: pointer;
+		}
+		div#botao-sedans:hover {
+			background-color: var(--bright-orange);
+		}
+		div#botao-suvs:hover {
+			background-color: var(--dark-cyan);
+		}
+		div#botao-luxury:hover {
+			background-color: var(--very-dark-cyan);
+		}
+		@media only screen and (max-width: 1000px){
+			main#tudo {
+				height: 1500px;
+			}
+			div#cards {
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+			div.learn-more {
+				margin-top: 2rem;
+			}
+			div#sedans, div#suvs, div#luxury {
+				height: 450px;
+			}
+			div#sedans {
+				border-radius: 10px 10px 0 0;
+			}
+			div#luxury {
+				border-radius: 0 0 10px 10px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<main id="tudo">
+		<div id="cards">
+			<div id="sedans">
+				<div class="alinhar-conteudo">
+					<img src="images/icon-sedans.svg" alt="Icon Sedans" id="icon-sedans">
+					<h1>Sedans</h1>
+					<p>Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city or on your next road trip.</p>
+				</div>
+					<div class="learn-more" id="botao-sedans">Learn More</div>
+			</div>
+			<div id="suvs">
+				<div class="alinhar-conteudo">
+					<img src="images/icon-suvs.svg" alt="Icon Suvs" id="icon-suvs">
+					<h1>SUVs</h1>
+					<p>Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation and off-road adventures.</p>
+				</div>
+					<div class="learn-more" id="botao-suvs">Learn More</div>
+			</div>
+			<div id="luxury">
+				<div class="alinhar-conteudo">
+					<img src="images/icon-luxury.svg" alt="Icon Luxury" id="icon-luxury">
+					<h1>Luxury</h1>
+					<p>Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury rental and arrive in style.</p>
+				</div>
+					<div class="learn-more" id="botao-luxury">Learn More</div>
+			</div>
+		</div>
+	</main>
+</body>
+</html>
